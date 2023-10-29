@@ -1,0 +1,23 @@
+.Registr{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background: rgb(1,40,72);
+    background: linear-gradient(90deg, rgba(1,40,72,1) 0%, rgba(37,42,108,1) 79%, rgba(20,16,117,1) 100%);
+}
+.Module{
+    background: linear-gradient(90deg, rgba(22,130,138,1) 0%, rgba(43,151,140,1) 76%, rgba(55,157,136,1) 100%);
+    padding: 10px 50px 10px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    cursor: pointer;
+
+}
+.Module h1{
+    color: aliceblue;
+  font-size:55px;
+}
