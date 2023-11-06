@@ -1,0 +1,24 @@
+{
+    "question" :[
+        "vor tvakanine cnvel mesrop mashtoc?",
+        "ashxarhi ujex txem",
+        "lav txayes",
+        "hayastani naxagah",
+        "Germaniayi mayraqaxaq"
+         
+    ],
+    "answer" :[
+    ["361","400","290","1000"],
+    ["vandam","361","hitler","napoleon"],
+    ["cidem","b","ga","kaxsa"],
+    ["ashot","gecvor","satik","serj"],
+    ["a","b","c","d"]
+    ],
+    "right_answer":[
+        "361",
+        "vandam",
+        "cidem",
+        "serj",
+        "d"
+    ]
+}
