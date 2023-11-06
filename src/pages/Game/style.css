@@ -1,0 +1,63 @@
+.Game{
+    background-image: url("../../assets/images/background.jpg");
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.Header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: aliceblue;
+
+}
+.Help{
+    display: flex;
+    flex-direction: row;
+}
+.Fitfty{
+    padding-right: 20px;
+}
+.Hall{
+    padding-left: 20px;
+}
+.Bank{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    background: aqua;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Questions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Quiz{
+    padding: 10px 200px 10px 200px;
+    background-color: aqua;
+    margin-bottom: 50px;
+    border-radius: 50px;
+}
+.answer1{
+    padding: 5px 80px 5px 80px;
+    background-color: rgb(29, 33, 33);
+    margin-right: 40px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+   color: aliceblue;
+   cursor: pointer;
+}
+.answers{
+    display: flex;
+    flex-direction: row;
+}
+.answers2{
+    display: flex;
+    flex-direction: row;
+}
