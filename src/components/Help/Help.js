@@ -1,8 +1,8 @@
-const Help = ({FitftyClick,FitftyDel})=>{
+const Help = ({FitftyClick,FitftyDel,CallClick,CallDel})=>{
     return(
         <div className='Help'>
     { FitftyDel && <div className='Fitfty' onClick={FitftyClick}>50/50</div>}
-        <div className='Call'>call</div>
+       {CallDel &&  <div className='Call' onClick={CallClick}>call</div>} 
         <div className='Hall'>zali</div>
     </div>
     )

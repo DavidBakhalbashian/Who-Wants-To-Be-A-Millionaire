@@ -34,6 +34,18 @@
 .Hall{
     padding-left: 20px;
 }
+.Call{
+    padding-right: 20px;
+    height: 40px;
+    width: 58px;
+    background: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
 .Bank{
     width: 200px;
     height: 200px;
@@ -98,4 +110,35 @@
 .answers2{
     display: flex;
     flex-direction: row;
+}
+.Main{
+    display: flex;
+}
+.CallDisplay{
+    margin-left: 100px;
+    width: 170px;
+    height: 160px;
+    background-color: antiquewhite;
+    border-radius: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.CallDisplay img{
+    width: 140px;
+    height: 130px;
+}
+.CallHelp{
+ 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.CallHelp h1{
+
+    color: aliceblue;
+
 }
