@@ -12,16 +12,16 @@ const Question = ({Quest,Ans,AnswerClick})=>{
             <div className='answer1' onClick={AnswerClick}>
                 <h1>{Ans[0]}</h1>
                 </div>  
-                 <div className='answer1' onClick={AnswerClick}>
+                 <div className='answer2' onClick={AnswerClick}>
                 <h1>{Ans[1]}</h1>
                 </div> 
             </div>
           
             <div className='answers2'>
-            <div className='answer1' onClick={AnswerClick}>
+            <div className='answer3' onClick={AnswerClick}>
                 <h1>{Ans[2]}</h1>
                 </div>  
-                <div className='answer1' onClick={AnswerClick}>
+                <div className='answer4' onClick={AnswerClick}>
                 <h1>{Ans[3]}</h1>
                 </div>  
 
