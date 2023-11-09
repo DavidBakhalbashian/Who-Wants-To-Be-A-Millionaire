@@ -3,6 +3,7 @@ import './style.css'
 import Question from '../../components/Question/Question'
 import Server from '../../server/server.json'
 import Help from '../../components/Help/Help'
+import Call from '../../components/Call/Call'
 const Game = () => {
 
     const q1 = Server.q1;
@@ -26,6 +27,8 @@ const Game = () => {
     const [Answer, setAnswer] = useState(questions[question_index].answer)
     const [Right, setRight] = useState(questions[question_index].Right)
     const [FitftyDel, setFitftyDel] = useState(true)
+    const [CallView,setCallView] = useState(false)
+    const [CallDel,setCallDel] = useState(true)
     const AnswerClick = useCallback((item) => {
         if (item.target.innerText === Right) {
             setQuestionIndex((prev) => prev + 1)
@@ -54,6 +57,15 @@ const Game = () => {
         setAnswer(updatedAnswer);
         setFitftyDel(false)
     }, [Answer, Right]);
+const CallClick = useCallback(()=>{
+    // setCallView(true)
+  alert(Quest+ ' ' + "BAAAREEEV")
+  alert(Right+ ' ' + "im karciqov")
+  setCallDel(false)
+
+
+},[question_index])
+
 
 
     return (
@@ -61,10 +73,15 @@ const Game = () => {
             <div className='Header'>
                 <div>logo</div>
                 <div>10</div>
-                <Help FitftyClick={FitftyClick} FitftyDel={FitftyDel} />
+                <Help FitftyClick={FitftyClick} FitftyDel={FitftyDel}  CallClick ={CallClick} CallDel={CallDel} />
             </div>
+            <div className='Main'>
             <div className='Bank'>bank</div>
-
+            <div className='CallHelp'>
+             <Call CallView ={CallView} />
+             </div>
+             </div>
+         
             <Question Ans={Answer} AnswerClick={AnswerClick} Quest={Quest} />
         </div>
     )
