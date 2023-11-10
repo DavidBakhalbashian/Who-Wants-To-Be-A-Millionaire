@@ -1,6 +1,6 @@
 import ManPng from '../../assets/images/man.png'
 
-const Call =({CallView})=>{
+const CallFrien =({CallView})=>{
     return(
         <>
   {CallView && <div className="CallDisplay">
@@ -10,4 +10,4 @@ const Call =({CallView})=>{
    </>
     )
 }
-export default Call
+export default CallFrien
