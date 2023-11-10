@@ -3,7 +3,9 @@ import './style.css'
 import Question from '../../components/Question/Question'
 import Server from '../../server/server.json'
 import Help from '../../components/Help/Help'
-import Call from '../../components/Call/Call'
+import Call from '../../components/CallFrien/Call'
+import CallFrien from '../../components/CallFrien/Call'
+import HallResolve from '../../components/HallResolve/HallResolve'
 const Game = () => {
 
     const q1 = Server.q1;
@@ -29,12 +31,16 @@ const Game = () => {
     const [FitftyDel, setFitftyDel] = useState(true)
     const [CallView,setCallView] = useState(false)
     const [CallDel,setCallDel] = useState(true)
+    const [HallView,setHallView] = useState(false)
+    const [HallClickView,setHallClickView] = useState(true)
     const AnswerClick = useCallback((item) => {
         if (item.target.innerText === Right) {
             setQuestionIndex((prev) => prev + 1)
             setAnswer(questions[question_index + 1].answer)
             setQuest(questions[question_index + 1].question)
             setRight(questions[question_index + 1].Right)
+            setHallView(false)
+            
         } else {
             prompt("sxal")
         }
@@ -66,20 +72,24 @@ const CallClick = useCallback(()=>{
 
 },[question_index])
 
-
+const HallClick = useCallback(()=>{
+setHallView(true)
+setHallClickView(false)
+},[question_index])
 
     return (
         <div className='Game'>
             <div className='Header'>
                 <div>logo</div>
                 <div>10</div>
-                <Help FitftyClick={FitftyClick} FitftyDel={FitftyDel}  CallClick ={CallClick} CallDel={CallDel} />
+                <Help FitftyClick={FitftyClick} FitftyDel={FitftyDel}  CallClick ={CallClick} CallDel={CallDel} HallClick = {HallClick} HallClickView = {HallClickView}/>
             </div>
             <div className='Main'>
             <div className='Bank'>bank</div>
             <div className='CallHelp'>
-             <Call CallView ={CallView} />
+             <CallFrien CallView ={CallView} />
              </div>
+             <HallResolve Answer = {Answer} Right = {Right} HallView = {HallView}/>
              </div>
          
             <Question Ans={Answer} AnswerClick={AnswerClick} Quest={Quest} />
