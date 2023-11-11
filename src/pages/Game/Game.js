@@ -6,6 +6,7 @@ import Help from '../../components/Help/Help'
 import Call from '../../components/CallFrien/Call'
 import CallFrien from '../../components/CallFrien/Call'
 import HallResolve from '../../components/HallResolve/HallResolve'
+import Bank from '../../components/Bank/Bank'
 const Game = () => {
 
     const q1 = Server.q1;
@@ -21,7 +22,7 @@ const Game = () => {
     const q11 = Server.q11;
     const q12 = Server.q12;
     const q13 = Server.q13;
-
+    
     const questions = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13]
     
     const [question_index, setQuestionIndex] = useState(0)
@@ -34,14 +35,17 @@ const Game = () => {
     const [HallView,setHallView] = useState(false)
     const [HallClickView,setHallClickView] = useState(true)
     const [timer, setTimer] = useState(30);
+    const [Money,setMoney] = useState(questions[question_index].Money)
     const AnswerClick = useCallback((item) => {
         if (item.target.innerText === Right) {
             setQuestionIndex((prev) => prev + 1)
             setAnswer(questions[question_index + 1].answer)
             setQuest(questions[question_index + 1].question)
             setRight(questions[question_index + 1].Right)
+            setMoney(questions[question_index + 1].Money)
             setHallView(false)
             setTimer(30)
+          
         } else {
             prompt("sxal")
         }
@@ -102,7 +106,8 @@ if(timer === 0){
                 <Help FitftyClick={FitftyClick} FitftyDel={FitftyDel}  CallClick ={CallClick} CallDel={CallDel} HallClick = {HallClick} HallClickView = {HallClickView}/>
             </div>
             <div className='Main'>
-            <div className='Bank'>bank</div>
+            <Bank Money = {Money}/>
+            <div className='Nkar'>NKAR</div>
             <div className='CallHelp'>
              <CallFrien CallView ={CallView} />
              </div>

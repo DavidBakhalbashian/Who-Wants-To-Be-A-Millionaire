@@ -171,3 +171,9 @@
 font-size: 20px;
 padding-left: 20px;
 }
+.Nkar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
