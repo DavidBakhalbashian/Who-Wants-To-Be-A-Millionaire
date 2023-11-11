@@ -33,6 +33,7 @@ const Game = () => {
     const [CallDel,setCallDel] = useState(true)
     const [HallView,setHallView] = useState(false)
     const [HallClickView,setHallClickView] = useState(true)
+    const [timer, setTimer] = useState(30);
     const AnswerClick = useCallback((item) => {
         if (item.target.innerText === Right) {
             setQuestionIndex((prev) => prev + 1)
@@ -40,7 +41,7 @@ const Game = () => {
             setQuest(questions[question_index + 1].question)
             setRight(questions[question_index + 1].Right)
             setHallView(false)
-            
+            setTimer(30)
         } else {
             prompt("sxal")
         }
@@ -50,8 +51,6 @@ const Game = () => {
         const incorrectAnswers = Answer.filter(answer => answer !== Right);
         const randomIndex1 = Math.floor(Math.random() * incorrectAnswers.length);
         const randomIndex2 = (randomIndex1 + 1) % incorrectAnswers.length;
-
-
         const updatedAnswer = Answer.map(answer => {
             if (answer === incorrectAnswers[randomIndex1] || answer === incorrectAnswers[randomIndex2]) {
                 return null;
@@ -77,11 +76,29 @@ setHallView(true)
 setHallClickView(false)
 },[question_index])
 
+useEffect(() => {
+    const timerInterval = setInterval(() => {
+        setTimer((prev) => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+
+
+    return () => clearInterval(timerInterval);
+}, []);
+
+useEffect(()=>{
+if(timer === 0){
+    alert("Time up")
+    
+}
+},[timer,question_index])
+
+
+    
     return (
         <div className='Game'>
             <div className='Header'>
                 <div>logo</div>
-                <div>10</div>
+                <div>{timer}</div>
                 <Help FitftyClick={FitftyClick} FitftyDel={FitftyDel}  CallClick ={CallClick} CallDel={CallDel} HallClick = {HallClick} HallClickView = {HallClickView}/>
             </div>
             <div className='Main'>
