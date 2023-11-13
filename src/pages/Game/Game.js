@@ -22,8 +22,8 @@ const Game = () => {
     const q11 = Server.q11;
     const q12 = Server.q12;
     const q13 = Server.q13;
-    
-    const questions = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13]
+    const q14 = Server.q14
+    const questions = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13,q14]
     
     const [question_index, setQuestionIndex] = useState(0)
     const [Quest, setQuest] = useState(questions[question_index].question)
@@ -35,7 +35,7 @@ const Game = () => {
     const [HallView,setHallView] = useState(false)
     const [HallClickView,setHallClickView] = useState(true)
     const [timer, setTimer] = useState(30);
-    const [Money,setMoney] = useState(questions[question_index].Money)
+    const [Money,setMoney] = useState("0$")
     const AnswerClick = useCallback((item) => {
         if (item.target.innerText === Right) {
             setQuestionIndex((prev) => prev + 1)
