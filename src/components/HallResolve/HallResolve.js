@@ -1,10 +1,11 @@
 import { Route } from "react-router-dom"
-
+import HallRes from '../../assets/images/HallRes.png'
 const HallResolve = ({Answer,Right,HallView})=>{
   
     return(
         <>
-     {HallView  &&   <div className="HallBlock">
+        {HallView   &&   <div className="HallBlock">
+     <div className="HallItem">
             {Answer.map((item)=>{
                 if(item === Right){
                     return(
@@ -22,6 +23,7 @@ const HallResolve = ({Answer,Right,HallView})=>{
                 }
                 
             })}
+        </div>
         </div>}
         </>
     )

@@ -102,7 +102,9 @@ if(timer === 0){
         <div className='Game'>
             <div className='Header'>
                 <div>logo</div>
-                <div>{timer}</div>
+                <div className='Timer'>
+                   <h1>{timer}</h1> 
+                    </div>
                 <Help FitftyClick={FitftyClick} FitftyDel={FitftyDel}  CallClick ={CallClick} CallDel={CallDel} HallClick = {HallClick} HallClickView = {HallClickView}/>
             </div>
             <div className='Main'>
