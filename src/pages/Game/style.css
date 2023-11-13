@@ -1,5 +1,5 @@
 .Game{
-    background-image: url("../../assets/images/background.jpg");
+    background-image: url("../../assets/images/download.png");
     height: 100vh;
     background-size: cover;
     display: flex;
@@ -11,60 +11,39 @@
     flex-direction: row;
     justify-content: space-around;
     color: aliceblue;
-
+   align-items: center;
 }
 .Help{
     display: flex;
     flex-direction: row;
 }
 .Fitfty{
-
-    padding-right: 20px;
-    height: 40px;
-    width: 58px;
-    background: aqua;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    cursor: pointer;
-
+   cursor: pointer;
 }
-.Hall{
-    padding-right: 20px;
-    height: 40px;
-    width: 58px;
-    background: aqua;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    cursor: pointer;
 
+.Hall{
+cursor: pointer;
+margin-left: 10px;
 }
 .Call{
-    padding-right: 20px;
-    height: 40px;
-    width: 58px;
-    background: aqua;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.Bank{
+    width: 143px;
+    height: 78px;
+    background-image: url('../../assets/images/bank.png');
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    border-radius: 20px;
-    cursor: pointer;
-}
-.Bank{
-    width: 200px;
-    height: 200px;
-    border-radius: 20px;
-    background: aqua;
+    align-items: center;
     margin-left: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: aliceblue;
+}
+.Bank h1{
+font-size: 29px;
+margin-left: 20px;
 }
 .Questions{
     display: flex;
@@ -72,50 +51,38 @@
     align-items: center;
 }
 .Quiz{
-    padding: 10px 200px 10px 200px;
-    background-color: aqua;
-    margin-bottom: 50px;
-    border-radius: 50px;
+   width: 780px;
+    height: 130px;
+
+    background-color: rgb(11, 19, 46);
+    border: 4px solid aqua;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.Quiz h2{
+color: aliceblue;
 }
 .answer1{
-    padding: 5px 80px 5px 80px;
-    background-color: rgb(29, 33, 33);
+    background-color: rgb(11, 19, 46);
+    padding: 5px 25px 5px 25px;
+    border: 3px solid aqua;
     margin-right: 40px;
     margin-bottom: 40px;
     border-radius: 20px;
-   color: aliceblue;
-   cursor: pointer;
+    color: aliceblue;
+    cursor: pointer;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.answer2{
-    padding: 5px 80px 5px 80px;
-    background-color: rgb(29, 33, 33);
-    margin-right: 40px;
-    margin-bottom: 40px;
-    border-radius: 20px;
-   color: aliceblue;
-   cursor: pointer;
-}
-.answer3{
-    padding: 5px 80px 5px 80px;
-    background-color: rgb(29, 33, 33);
-    margin-right: 40px;
-    margin-bottom: 40px;
-    border-radius: 20px;
-   color: aliceblue;
-   cursor: pointer;
-}
-.answer4{
-    padding: 5px 80px 5px 80px;
-    background-color: rgb(29, 33, 33);
-    margin-right: 40px;
-    margin-bottom: 40px;
-    border-radius: 20px;
-   color: aliceblue;
-   cursor: pointer;
-}
+
 .answers{
     display: flex;
     flex-direction: row;
+    margin-top: 30px;
 }
 .answers2{
     display: flex;
@@ -124,6 +91,7 @@
 .Main{
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 .CallDisplay{
     margin-left: 100px;
@@ -154,14 +122,16 @@
 
 }
 .HallBlock{
-    width: 200px;
-    height: 200px;
-    background-color: antiquewhite;
+  
+  background-image: url('../../assets/images/HallRes.png');
     border-radius: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    align-items: center;
+   color: aliceblue;
+   height: 285px;
+   width: 215px;
 }
 .HallAns{
     display: flex;
@@ -171,9 +141,27 @@
 font-size: 20px;
 padding-left: 20px;
 }
+.HallItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
 .Nkar{
     display: flex;
     justify-content: center;
     align-items: center;
     color: aliceblue;
+}
+.Timer{
+
+    border: 4px solid rgb(180, 76, 16);
+    border-radius: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 50px;
+   height: 50px;
+   margin-left: 120px;
 }

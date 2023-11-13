@@ -1,6 +1,11 @@
+
 const Bank = ({Money})=>{
 return(
-    <div className='Bank'>{Money}</div>
+    <div className='Bank'>
+        
+      <h1>Bank {Money}</h1>  
+        
+        </div>
 )
 }
 
