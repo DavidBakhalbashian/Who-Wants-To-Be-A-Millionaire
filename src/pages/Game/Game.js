@@ -7,6 +7,7 @@ import Call from '../../components/CallFrien/Call'
 import CallFrien from '../../components/CallFrien/Call'
 import HallResolve from '../../components/HallResolve/HallResolve'
 import Bank from '../../components/Bank/Bank'
+import { useNavigate } from 'react-router-dom'
 const Game = () => {
 
     const q1 = Server.q1;
@@ -23,8 +24,8 @@ const Game = () => {
     const q12 = Server.q12;
     const q13 = Server.q13;
     const q14 = Server.q14
+   const navigate = useNavigate()
     const questions = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13,q14]
-    
     const [question_index, setQuestionIndex] = useState(0)
     const [Quest, setQuest] = useState(questions[question_index].question)
     const [Answer, setAnswer] = useState(questions[question_index].answer)
@@ -47,7 +48,8 @@ const Game = () => {
             setTimer(30)
           
         } else {
-            prompt("sxal")
+           alert("sxal")
+            navigate('/lost')
         }
 
     }, [question_index])
@@ -92,6 +94,7 @@ useEffect(() => {
 useEffect(()=>{
 if(timer === 0){
     alert("Time up")
+    navigate('/lost')
     
 }
 },[timer,question_index])

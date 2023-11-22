@@ -13,6 +13,7 @@ const Registr = ()=>{
         <div onClick={onClick}>
            <h1>Play</h1>
         </div>
+        
        </div>
         </div>
     )
